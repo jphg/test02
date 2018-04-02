@@ -6,11 +6,59 @@
     <title>test 02</title>
     <style>
         *{box-sizing: border-box;}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test 02</title>
+        <style>
+            *{box-sizing: border-box;}
+            #man{
+                position: relative;
+                width: 120px;
+                height: 180px;
+                overflow: hidden;
+                animation: move 6s linear alternate infinite;
+                transform-origin: left;
 
-    </style>
-</head>
 
-<body>
 
-</body>
+            }
+            #man img{
+                animation: walk 1s steps(8) infinite;
+            }
+            @keyframes walk{
+                to{
+                    transform: translate(-960px);
+                }
+            }
+            @keyframes _move{
+                to{
+                    transform: translate(100vw);
+                }
+            }
+            #background{
+                background-image: url(tree.png);
+                width: 100vw;
+                height: 252px;
+                padding-top: 76px;
+                animation: panorama 6s linear infinite;
+            }
+            @keyframes panorama{
+                to{
+                    background-position: -400px;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="background">
+            <div id="man">
+                <img src="walking.png" alt="walking">
+            </div>
+        </div>
+
+
+    </body>
 </html>
